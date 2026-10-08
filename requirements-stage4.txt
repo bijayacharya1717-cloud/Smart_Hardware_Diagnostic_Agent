@@ -1,0 +1,10 @@
+# Install into the project's virtual environment: pip install -r requirements-stage4.txt
+fastmcp
+mcp
+google-genai
+python-dotenv
+qdrant-client
+sentence-transformers
+pandas
+matplotlib
+deepeval

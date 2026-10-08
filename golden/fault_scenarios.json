@@ -1,0 +1,24 @@
+[
+  {
+    "id": "fault_bme280_overtemperature_001",
+    "description": "The temperature reading rises sharply during operation and later returns toward baseline.",
+    "failure_time": "2026-10-08 13:30:00",
+    "expected_evidence": [
+      "temperature anomaly occurs around the specified failure time",
+      "BME280 operating temperature range is -40 C to 85 C",
+      "the indexed pinout or schematic evidence is used only if it directly identifies relevant connections"
+    ],
+    "ideal_diagnosis": "The synthetic log shows a sustained temperature excursion peaking near 92 C around 13:25, above the BME280 operating upper limit of 85 C. This establishes an out-of-range sensor environment, not the physical cause of heating. Pressure and humidity are available for comparison; the log has no current or voltage channels, so it cannot establish an electrical overload. Inspect thermal coupling, placement, airflow and supply at the sensor using appropriate instruments. Cite the exact log and datasheet evidence; do not infer a motor fault or pin connection without matching schematic evidence."
+  },
+  {
+    "id": "fault_motor_stall_insufficient_channels_001",
+    "description": "Motor stalls intermittently under load.",
+    "failure_time": "2026-10-08 13:30:00",
+    "expected_evidence": [
+      "sensor log schema contains temperature, pressure and humidity only",
+      "current and voltage queries report unknown metrics",
+      "datasheet and schematic evidence are cited only when retrieved and relevant"
+    ],
+    "ideal_diagnosis": "The available sensor log cannot confirm a motor stall mechanism because it contains no motor current, voltage, speed, load or driver-temperature measurements. State that the available evidence is insufficient to rank causes confidently. Request synchronized motor current, supply voltage, speed/encoder and driver temperature measurements under load. Use datasheet limits and schematic connections only when matching evidence is retrieved; do not claim an overcurrent, undervoltage, wiring defect or specific pin connection without it."
+  }
+]

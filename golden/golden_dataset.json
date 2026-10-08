@@ -1,0 +1,92 @@
+[
+  {
+    "id": "q01",
+    "source": "ESP32-WROOM-32E.PDF",
+    "page": 2,
+    "question": "What is the operating voltage range of the ESP32-WROOM-32E module?",
+    "context": "Operating voltage/Power supply: 3.0 V to 3.6 V",
+    "ideal_answer": "The ESP32-WROOM-32E operates on a supply voltage between 3.0V and 3.6V."
+  },
+  {
+    "id": "q02",
+    "source": "ESP32-WROOM-32E.PDF",
+    "page": 2,
+    "question": "What wireless connectivity does the ESP32-WROOM-32E support?",
+    "context": "Integrated 2.4 GHz Wi-Fi (802.11 b/g/n) and Bluetooth (Bluetooth v4.2 BR/EDR and BLE) transceiver, baseband, stack, and low noise amplifier.",
+    "ideal_answer": "It supports 2.4 GHz Wi-Fi (802.11 b/g/n) and Bluetooth v4.2, including both BR/EDR and Bluetooth Low Energy (BLE)."
+  },
+  {
+    "id": "q03",
+    "source": "ESP32-WROOM-32E.PDF",
+    "page": 2,
+    "question": "What is the recommended operating ambient temperature range?",
+    "context": "Operating ambient temperature range: -40C to 85C (depending on the specific module variant)",
+    "ideal_answer": "Approximately -40C to 85C, though you should confirm the exact figure printed in your specific copy since it can vary slightly by module grade."
+  },
+  {
+    "id": "q04",
+    "source": "bst-bme280-ds002.pdf",
+    "page": 2,
+    "question": "What is the operating supply voltage range of the BME280 sensor (VDD)?",
+    "context": "Supply voltage VDD: 1.71V to 3.6V",
+    "ideal_answer": "The BME280's main supply voltage (VDD) ranges from 1.71V to 3.6V."
+  },
+  {
+    "id": "q05",
+    "source": "bst-bme280-ds002.pdf",
+    "page": 3,
+    "question": "What environmental parameters does the BME280 measure?",
+    "context": "The BME280 is a combined digital humidity, pressure and temperature sensor.",
+    "ideal_answer": "It measures humidity, barometric pressure, and temperature, all from a single integrated sensor."
+  },
+  {
+    "id": "q06",
+    "source": "bst-bme280-ds002.pdf",
+    "page": 32,
+    "question": "What communication interfaces does the BME280 support, and what are its I2C addresses?",
+    "context": "Interface: I2C and SPI. I2C slave address is either 0x76 or 0x77 depending on the state of the SDO pin.",
+    "ideal_answer": "It supports both I2C and SPI. Over I2C, its address is 0x76 or 0x77, selected by the SDO pin's logic level."
+  },
+  {
+    "id": "q07",
+    "source": "A000066.PDF",
+    "page": 2,
+    "question": "What microcontroller does the Arduino Uno Rev3 (A000066) use, and at what clock speed?",
+    "context": "Microcontroller: ATmega328P. Clock Speed: 16 MHz.",
+    "ideal_answer": "It uses an ATmega328P microcontroller running at 16 MHz."
+  },
+  {
+    "id": "q08",
+    "source": "A000066.PDF",
+    "page": 5,
+    "question": "What is the recommended input voltage for the Arduino Uno, and what are the absolute limits?",
+    "context": "Recommended Input Voltage: 7-12V. Input Voltage Limits: 6-20V.",
+    "ideal_answer": "The recommended input voltage is 7-12V; the board can tolerate 6-20V, but voltages outside the recommended range can cause instability or damage."
+  },
+  {
+    "id": "q09",
+    "source": "A000066.PDF",
+    "page": 10,
+    "question": "How many digital I/O pins and analog input pins does the Arduino Uno have?",
+    "context": "Digital I/O Pins: 14 (of which 6 provide PWM output). Analog Input Pins: 6.",
+    "ideal_answer": "14 digital I/O pins (6 of which support PWM output) and 6 analog input pins."
+  },
+  {
+    "id": "q10",
+    "source": "A000066.PDF",
+    "page": null,
+    "question": "What is the maximum DC current recommended per I/O pin on the Arduino Uno?",
+    "context": null,
+    "expected_behavior": "should_decline",
+    "note": "This 20mA figure is real and well-known for the ATmega328P, but it is not actually present in A000066.PDF itself. Kept intentionally to verify the system says it doesn't have enough information rather than hallucinating a plausible-sounding answer from outside knowledge."
+  },
+  {
+  "id": "q11",
+  "source": "bst-bme280-ds002.pdf",
+  "page": 38,
+  "question": "Looking at the BME280's pin diagram, which pin is used for the I2C clock line (SCL)?",
+  "context": null,
+  "expected_behavior": "requires_diagram_caption",
+  "note": "Answer should come from the diagram-caption chunk for the pinout page, not body text. Verify the caption actually names this pin correctly before treating this as answerable."
+  }
+]
